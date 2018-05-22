@@ -9,9 +9,10 @@ html, body {
 }
 .container {
     width: 80%;
+    margin: 0 auto;
 }
 h1 {
-    padding: 3rem 0;
+    padding: 5rem 0 3rem;
     font-family: 'Caveat', cursive;
     font-size: 5rem;
 }
@@ -70,7 +71,7 @@ svg {
 #music .col-6 {
     flex-wrap: wrap;
     display: flex;
-    width: 40rem !important;
+    width: 45rem !important;
     margin: 0 0 0 6rem;
 }
 #music .col-1 {
@@ -85,11 +86,15 @@ svg {
     opacity: 0.5;
 }
 /*bx-slider*/
+.bx-wrapper {
+    display: flex;
+    align-items: center;
+        margin-left: 0;
+}
 .bx-controls {
-    position: absolute;
-    top: 108.5rem;
-    left: 50rem;
+    position: relative;
     width: 2rem;
+    margin: 0;
 }
 .bx-pager-item a {
     display: block;
@@ -106,4 +111,36 @@ svg {
     padding: 2rem 0;
     text-align: center;
     background-color: #00010A;
+}
+
+/*レスポンシブ対応*/
+@media(max-width:768px) {
+    .bx-wrapper{
+        width: 100%;
+    }
+}
+@media(max-width:1024px) {
+    .bx-wrapper{
+        width: 90%;
+    }
+}
+@media(min-width:1024px) {
+    .bx-wrapper{
+        width: 75%;
+    }
+}
+@media(min-width:1440px) {
+    .bx-wrapper{
+        width: 65%;
+    }
+}
+@media(min-width:1700px) {
+    .bx-wrapper{
+        width: 50%;
+    }
+}
+@media(min-width:2280px) {
+    .bx-wrapper{
+        width: 40%;
+    }
 }
